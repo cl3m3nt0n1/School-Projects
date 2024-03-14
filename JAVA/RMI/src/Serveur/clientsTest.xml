@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clients>
+  <client>
+    <pseudo> michel </pseudo>
+    <mdp>mot de passe</mdp>
+  </client>
+  <client>
+    <pseudo> MonsieurDenis </pseudo>
+    <mdp>ILoveXML</mdp>
+  </client
+  <client>
+    <pseudo>Charles</pseudo>
+    <mdp>Bonjour</mdp>
+  </client>
+  <client>
+    <pseudo>Henri</pseudo>
+    <mdp>Pointer</mdp>
+  </client>
+  <client>
+    <pseudo>henri</pseudo>
+    <mdp>thierry</mdp>
+  </client>
+</clients>

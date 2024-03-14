@@ -1,0 +1,18 @@
+<clients>
+    <client>
+        <pseudo> michel </pseudo>
+        <mdp>mot de passe</mdp>
+    </client>
+    <client>
+        <pseudo> MonsieurDenis </pseudo>
+        <mdp>ILoveXML</mdp>
+    </client>
+    <client>
+        <pseudo>Charles</pseudo>
+        <mdp>Bonjour</mdp>
+    </client>
+    <client>
+        <pseudo>Henri</pseudo>
+        <mdp>Pointer</mdp>
+    </client>
+</clients>

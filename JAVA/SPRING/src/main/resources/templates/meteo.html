@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Meteo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Using Thymeleaf to replace this div with the header file content -->
+<div th:replace="header :: header"></div>
+<body>
+
+<ul class="list-group list-group-flush">
+  <h6 class="list-group-item-heading" th:text=" 'Vous habitez à : ' + ${address}"/>
+  <li class="list-group-item" th:text=" 'Latitude : ' + ${latitude}"/>
+  <li class="list-group-item" th:text=" 'Longitude : ' + ${longitude}"/>
+</ul>
+
+<h3 th:text=" 'Prévisions météo pour : ' + ${forecast.getCity().getName()}"/>
+
+<table class="table table-hover table-responsive">
+  <thead>
+  <tr>
+    <th>Date/Heure</th>
+    <th>Température minimale</th>
+    <th>Température maximale</th>
+    <th>Probabilité de pluie</th>
+    <th>Vent</th>
+    <th>Direction du vent</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="day : ${forecast.forecast}">
+    <td th:text="${day.datetime}"></td>
+    <td th:text="${day.tmin}"></td>
+    <td th:text="${day.tmax}"></td>
+    <td th:text="${day.probarain}"></td>
+    <td th:text="${day.wind10m}"></td>
+    <td th:text="${day.dirwind10m}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
